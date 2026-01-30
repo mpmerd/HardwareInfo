@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "MacHardwareInfo/1.0.0": {
+        "runtime": {
+          "MacHardwareInfo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MacHardwareInfo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

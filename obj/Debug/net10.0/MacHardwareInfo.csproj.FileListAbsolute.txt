@@ -1,0 +1,14 @@
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/bin/Debug/net10.0/MacHardwareInfo
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/bin/Debug/net10.0/MacHardwareInfo.deps.json
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/bin/Debug/net10.0/MacHardwareInfo.runtimeconfig.json
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/bin/Debug/net10.0/MacHardwareInfo.dll
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/bin/Debug/net10.0/MacHardwareInfo.pdb
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/MacHardwareInfo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/MacHardwareInfo.AssemblyInfoInputs.cache
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/MacHardwareInfo.AssemblyInfo.cs
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/MacHardwareInfo.csproj.CoreCompileInputs.cache
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/MacHardwareInfo.dll
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/refint/MacHardwareInfo.dll
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/MacHardwareInfo.pdb
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/MacHardwareInfo.genruntimeconfig.cache
+/Users/maikelpelaez/Documents/Proyectos/PruebaProyLlmBarato/obj/Debug/net10.0/ref/MacHardwareInfo.dll
