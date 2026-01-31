@@ -34,4 +34,8 @@ Este proyecto contiene un script en C# que muestra las características del hard
 - El script muestra la información directamente en la terminal.
 
 ## Autor
+
 Creado por Maikel Pelaez y GitHub Copilot
+
+---
+Fecha y hora de última edición: 30 de enero de 2026, 00:00
