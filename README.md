@@ -1,41 +1,64 @@
 # HardwareInfo
 
-Este proyecto contiene un script en C# que muestra las características del hardware del equipo donde se ejecuta. El script es **multiplataforma** y funciona tanto en **Mac** como en **Windows**.
+Aplicación de consola multiplataforma que muestra las características del hardware del equipo donde se ejecuta. Funciona en **Windows**, **Linux** y **macOS**.
 
-## Características principales
-- Detección automática del sistema operativo (Mac o Windows)
-- Muestra información relevante del hardware y sistema:
-  - Modelo y fabricante
-  - Procesador (marca, núcleos físicos y lógicos)
-  - Memoria RAM
-  - Almacenamiento
-  - Red (MAC, IP)
-  - Pantalla
-  - Batería (si aplica)
-  - Sistema operativo y versión
-  - Tiempo de actividad
-  - GPU
-  - Dispositivos USB conectados
-  - Bluetooth
-  - Placa base (solo Windows)
+## Características
+
+| Sección              | Windows | Linux | macOS |
+|----------------------|:-------:|:-----:|:-----:|
+| Información general  | ✅      | ✅    | ✅    |
+| Procesador           | ✅      | ✅    | ✅    |
+| Memoria RAM          | ✅      | ✅    | ✅    |
+| Almacenamiento       | ✅      | ✅    | ✅    |
+| Red (IP/MAC)         | ✅      | ✅    | ✅    |
+| Pantalla             | ✅      | ✅    | ✅    |
+| Batería              | ✅      | ✅    | ✅    |
+| Versión del SO       | ✅      | ✅    | ✅    |
+| Tiempo de actividad  | ✅      | ✅    | ✅    |
+| GPU                  | ✅      | ✅    | ✅    |
+| USB conectados       | ✅      | ✅    | ❌    |
+| Placa base           | ✅      | ❌    | ❌    |
+| Bluetooth            | ❌      | ❌    | ✅    |
+| Temperatura sistema  | ❌      | ✅    | ❌    |
+
+## Requisitos
+
+- [.NET SDK](https://dotnet.microsoft.com/download) 8.0 o superior
 
 ## Ejecución
 
-1. Instala .NET SDK si no lo tienes ([descargar aquí](https://dotnet.microsoft.com/download))
-2. Abre una terminal en la carpeta del proyecto
-3. Ejecuta:
-   ```bash
-   dotnet run
-   ```
+```bash
+cd HardwareInfo
+dotnet run
+```
 
-## Notas
-- En Mac, utiliza comandos como `system_profiler`, `sysctl`, `df`, etc.
-- En Windows, utiliza comandos como `wmic`, `ipconfig`, `powershell`, etc.
-- El script muestra la información directamente en la terminal.
+## Compilar (publicación)
+
+```bash
+dotnet publish -c Release -r win-x64   --self-contained true
+dotnet publish -c Release -r linux-x64 --self-contained true
+dotnet publish -c Release -r osx-x64   --self-contained true
+```
+
+## Cambios respecto a la versión original
+
+### Novedades de la rama `feature/linux-support`
+
+- **Soporte completo para Linux**: se agregó el método `MostrarInfoLinux()` que obtiene información del hardware usando comandos estándar de Linux:
+  - `/etc/os-release` y `uname` para información del sistema
+  - `/proc/cpuinfo` y `nproc` para CPU
+  - `free` y `lsblk` / `df` para almacenamiento
+  - `ip` y `/sys/class/net/*/address` para red
+  - `cat /sys/class/drm/*/modes` para pantalla
+  - `/sys/class/power_supply/BAT0/capacity` para batería
+  - `lspci` para GPU
+  - `lsusb` para USB
+  - `/sys/class/thermal/thermal_zone*/temp` para temperatura
+
+- **Renombrado del proyecto**: de `MacHardwareInfo` a `HardwareInfo`, ya que ahora es verdaderamente multiplataforma.
+
+- **Limpieza de código**: el proyecto compila sin warnings (CS7022 eliminado al remover `Program.cs` duplicado).
 
 ## Autor
 
 Creado por Maikel Pelaez y GitHub Copilot
-
----
-Fecha y hora de última edición: 30 de enero de 2026, 00:00
